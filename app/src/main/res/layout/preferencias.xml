@@ -7,7 +7,7 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
@@ -16,77 +16,81 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/nombre_text"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/telefono_text"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/textView"
-                android:layout_marginTop="38dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Nombre" />
+                android:layout_height="511dp">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:text="Contacto de Emergencia"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/nombre_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/telefono_text"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView"
+                    android:layout_marginTop="38dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Nombre" />
 
-            <EditText
-                android:id="@+id/telefono_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/nombre_text"
-                android:layout_marginTop="20dp"
-                android:ems="10"
-                android:inputType="phone"
-                android:text="Telefono" />
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="Contacto de Emergencia"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-
-            <Button
-                android:id="@+id/guardar_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginBottom="24dp"
-                android:layout_marginEnd="19dp"
-                android:onClick="ejecutarConfiguracion"
-                android:text="Guardar" />
-
-            <EditText
-                android:id="@+id/mensaje_text"
-                android:layout_width="250dp"
-                android:layout_height="120dp"
-                android:layout_below="@+id/textView3"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="16dp"
-                android:gravity="top"
-                android:inputType="text|textMultiLine"
-                android:text="Alerta su familiar se ha caído" />
+                <EditText
+                    android:id="@+id/telefono_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/nombre_text"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:inputType="phone"
+                    android:text="Telefono" />
 
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/telefono_text"
-                android:layout_marginTop="38dp"
-                android:text="Mensaje de Alerta"
-                android:textStyle="bold" />
-        </RelativeLayout>
+                <Button
+                    android:id="@+id/guardar_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:onClick="ejecutarConfiguracion"
+                    android:text="Guardar" />
+
+                <EditText
+                    android:id="@+id/mensaje_text"
+                    android:layout_width="250dp"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/textView3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="49dp"
+                    android:gravity="top"
+                    android:inputType="text|textMultiLine"
+                    android:text="Alerta su familiar se ha caído" />
+
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/telefono_text"
+                    android:layout_marginTop="38dp"
+                    android:text="Mensaje de Alerta"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </ScrollView>
     </android.support.design.widget.CoordinatorLayout>
 
 </LinearLayout>
