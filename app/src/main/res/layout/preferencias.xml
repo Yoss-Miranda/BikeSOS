@@ -10,7 +10,8 @@
         android:layout_height="56dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+        android:theme="?attr/actionBarTheme"
+        app:title="@string/config" />
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -72,21 +73,21 @@
                     android:id="@+id/mensaje_text"
                     android:layout_width="250dp"
                     android:layout_height="120dp"
-                    android:layout_below="@+id/textView3"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="49dp"
+                    android:layout_marginTop="50dp"
                     android:gravity="top"
                     android:inputType="text|textMultiLine"
-                    android:text="Alerta su familiar se ha caído" />
+                    android:text="Alerta su familiar se ha caído"
+                    android:layout_below="@+id/textView3"
+                    android:layout_centerHorizontal="true" />
 
 
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
                     android:layout_below="@+id/telefono_text"
-                    android:layout_marginTop="38dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="35dp"
                     android:text="Mensaje de Alerta"
                     android:textStyle="bold" />
             </RelativeLayout>

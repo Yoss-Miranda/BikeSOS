@@ -2,6 +2,7 @@ package mirandasystem.bikesos;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -51,8 +52,9 @@ public class preferencias extends Activity {
         editor.putString("mensaje1",mensaje1.getText().toString());
         editor.commit();
         finish();
-
-        Toast.makeText(this, "Reinicia la App para que surta efecto los cambios", Toast.LENGTH_LONG).show();
+        Intent activitySettings = new Intent(this, bikeSOS.class );
+        startActivity(activitySettings);
+        //Toast.makeText(this, "Reinicia la App para que surta efecto los cambios", Toast.LENGTH_LONG).show();
     }
 
 

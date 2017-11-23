@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.telephony.SmsManager;
 import android.view.MenuItem;
 import android.view.Menu;
 import android.view.View;
@@ -14,7 +15,7 @@ import android.widget.TextView;
 
 
 public class bikeSOS extends AppCompatActivity{
-    private String nombre,telefono;
+    private String nombre,telefono,mensaje;
     private TextView nombre_label,telefono_label;
 
     @Override
@@ -27,17 +28,31 @@ public class bikeSOS extends AppCompatActivity{
         nombre_label=(TextView)findViewById(R.id.nombre1_label);
         telefono_label=(TextView)findViewById(R.id.telefono1_label);
 
+        cargaPreferencias();
+
+    }
+    private void cargaPreferencias(){
         SharedPreferences prefe=getSharedPreferences("datos", Context.MODE_PRIVATE);
         nombre= prefe.getString("nombre1","");
         telefono= prefe.getString("telefono1","");
-
+        mensaje=prefe.getString("mensaje1","");
         nombre_label.setText(nombre);
         telefono_label.setText(telefono);
-
     }
+
     public void abreMapa(View view){
         Intent activitySettings = new Intent(this, MapsActivity.class );
         startActivity(activitySettings);
+    }
+
+    private void enviaSMS(){
+
+            SmsManager sms = SmsManager.getDefault();
+            sms.sendTextMessage(telefono, null,mensaje, null, null);
+    }
+
+    private void cancelAlarma(){
+
     }
 
     @Override
