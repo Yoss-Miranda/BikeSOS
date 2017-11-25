@@ -2,11 +2,10 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="mirandasystem.bikesos.bikeSOS"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    >
+    tools:context="mirandasystem.bikesos.bikeSOS">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -28,47 +27,53 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#d1fffe">
 
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/toggleButton"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="101dp"
+            android:layout_marginTop="22dp"
+            android:onClick="sendSMS"
             android:text="enviar SMS" />
 
         <ToggleButton
             android:id="@+id/toggleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/button2"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="26dp"
-            android:text="ToggleButton" />
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="41dp"
+            android:background="@drawable/check"
+            android:text="ToggleButton"
+            android:textOff=""
+            android:textOn=""
+            android:layout_below="@+id/telefono1_label"
+            android:layout_centerHorizontal="true" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="34dp"
-            android:layout_marginTop="135dp"
+            android:layout_marginTop="133dp"
             android:text="Contacto"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/button2"
+            android:layout_marginEnd="24dp" />
 
         <TextView
             android:id="@+id/nombre1_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/textView2"
-            android:layout_below="@+id/textView2"
             android:layout_marginTop="25dp"
             android:text="Nombre:"
-            android:textStyle="bold" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/textView2"
+            android:layout_alignStart="@+id/textView2" />
 
         <TextView
             android:id="@+id/telefono1_label"
@@ -77,18 +82,19 @@
             android:layout_alignStart="@+id/nombre1_label"
             android:layout_below="@+id/nombre1_label"
             android:layout_marginTop="19dp"
-            android:layout_toStartOf="@+id/button2"
             android:text="Telefono:"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/mapabtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView2"
-            android:layout_toEndOf="@+id/toggleButton"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_above="@+id/telefono1_label"
+            android:layout_toEndOf="@+id/button2"
+            android:background="@drawable/oprim"
             android:onClick="abreMapa"
-            android:text="@string/title_activity_maps" />
+            android:text="" />
 
 
     </RelativeLayout>
